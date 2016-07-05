@@ -12,4 +12,9 @@ export class HeroService {
     // Now can async
     return Promise.resolve(HEROES);
   }
+
+  getHero(id: number) {
+    return this.getHeroes()
+               .then(heroes => heroes.filter(hero => hero.id === id)[0]);
+  }
 }
