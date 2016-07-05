@@ -1,31 +1,8 @@
 import { Component } from 'angular2/core';
 import { Hero } from './hero';
 import { HeroDetailComponent } from './hero-detail.component';
-
-const HEROES: Hero[] = [
-  { id: 11, name: 'Genji' },
-  { id: 12, name: 'McCree' },
-  { id: 13, name: 'Pharah' },
-  { id: 14, name: 'Reaper' },
-  { id: 15, name: 'Soldier: 76' },
-  { id: 16, name: 'Tracer' },
-  { id: 17, name: 'Bastion' },
-  { id: 18, name: 'Hanzo' },
-  { id: 19, name: 'Junkrat' },
-  { id: 20, name: 'Mei' },
-  { id: 21, name: 'Torbjorn' },
-  { id: 22, name: 'Widowmaker' },
-  { id: 23, name: 'D.Va' },
-  { id: 24, name: 'Reinhardt' },
-  { id: 25, name: 'Roadhog' },
-  { id: 26, name: 'Torbjorn' },
-  { id: 27, name: 'Winston' },
-  { id: 28, name: 'Zarya' },
-  { id: 29, name: 'Lucio' },
-  { id: 30, name: 'Mercy' },
-  { id: 31, name: 'Symmetra' },
-  { id: 32, name: 'Zenyatta' }
-];
+import { HeroService } from './hero.service';
+import { OnInit } from 'angular2/core';
 
 @Component({
   selector: 'my-app',
@@ -90,16 +67,37 @@ const HEROES: Hero[] = [
       margin-right: .8em;
       border-radius: 4px 0 0 4px;
     }
-  `]
+  `],
+  providers: [HeroService]
 })
 
-export class AppComponent {
-  heroes = HEROES;
+export class AppComponent implements OnInit {
+  heroes: Hero[];
   title = 'Tour of Heroes';
   selectedHero: Hero;
 
+  // parameter simultaneously defines a private
+  // heroService property and identifies it as a HeroService
+  // injection site - now Angular will know to supply
+  // an instance of the HeroService when it creates a new AppComponent
+  constructor(private heroService: HeroService) {
+
+  }
+
+  ngOnInit() {
+    this.getHeroes();
+  }
+
   onSelect(hero: Hero) {
     this.selectedHero = hero;
+  }
+
+  getHeroes() {
+    // Original synchronous call
+    //this.heroes = this.heroService.getHeroes();
+
+    // Call via Promise
+    this.heroService.getHeroes().then(heroes => this.heroes = heroes);
   }
 }
 
