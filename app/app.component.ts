@@ -1,7 +1,7 @@
 import { Component } from 'angular2/core';
 
 export class Hero {
-  id: number,
+  id: number;
   name: string;
 }
 
@@ -36,7 +36,7 @@ const HEROES: Hero[] = [
     <h1>{{title}}</h1>
     <h2>Overwatch Heroes</h2>
     <ul class="heroes">
-      <li *ngFor="#hero of heroes">
+      <li *ngFor="let hero of heroes">
         <span class="badge">{{hero.id}}</span> {{hero.name}}
       </li>
     </ul>
