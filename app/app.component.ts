@@ -7,7 +7,6 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import { MD_TOOLBAR_DIRECTIVES } from '@angular2-material/toolbar';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'my-app',
   template: `

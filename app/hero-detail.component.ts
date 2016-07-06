@@ -2,10 +2,18 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Hero } from './hero';
 import { HeroService } from './hero.service';
+import { MD_ICON_DIRECTIVES, MdIconRegistry } from '@angular2-material/icon';
+
 
 @Component({
   selector: 'my-hero-detail',
-  templateUrl: 'app/hero-detail.component.html'
+  templateUrl: 'app/hero-detail.component.html',
+  directives: [
+    MD_ICON_DIRECTIVES
+  ],
+  providers: [
+    MdIconRegistry
+  ]
 })
 
 export class HeroDetailComponent implements OnInit, OnDestroy {
