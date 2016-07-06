@@ -3,13 +3,14 @@ import { ActivatedRoute } from '@angular/router';
 import { Hero } from './hero';
 import { HeroService } from './hero.service';
 import { MD_ICON_DIRECTIVES, MdIconRegistry } from '@angular2-material/icon';
-
+import { MD_INPUT_DIRECTIVES } from '@angular2-material/input';
 
 @Component({
   selector: 'my-hero-detail',
   templateUrl: 'app/hero-detail.component.html',
   directives: [
-    MD_ICON_DIRECTIVES
+    MD_ICON_DIRECTIVES,
+    MD_INPUT_DIRECTIVES
   ],
   providers: [
     MdIconRegistry

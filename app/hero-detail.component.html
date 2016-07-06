@@ -1,11 +1,11 @@
 <div *ngIf="hero">
   <h2>{{hero.name}} details!</h2>
   <div>
-    <label>id: </label>{{hero.id}}
+    <label>ID: </label>{{hero.id}}
   </div>
   <div>
-    <label>name: </label>
-    <input [(ngModel)]="hero.name" placeholder="name" />
+    <label>Name: </label>
+    <md-input placeholder="name" [(ngModel)]="hero.name"></md-input>
   </div>
   <button md-fab (click)="goBack()">
     <md-icon>undo</md-icon>

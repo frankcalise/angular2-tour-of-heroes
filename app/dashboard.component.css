@@ -1,4 +1,4 @@
-[class*='col-'] {
+/*[class*='col-'] {
   float: left;
 }
 *, *:after, *:before {
@@ -57,4 +57,19 @@ h4 {
     .module {
       min-width: 60px;
     }
+}*/
+h3 {
+  text-align: center; margin-bottom: 0;
+}
+.secondary {
+  color: rgba(0,0,0,0.54);
+}
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+md-card {
+  width: 400px;
+  box-sizing: border-box;
+  margin: 16px;
 }
