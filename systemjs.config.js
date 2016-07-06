@@ -7,21 +7,13 @@
   var map = {
     'app':                        'app', // 'dist',
     '@angular':                   'node_modules/@angular',
-    'rxjs':                       'node_modules/rxjs',
-    '@angular2-material/core':    'node_modules/@angular2-material/core',
-    '@angular2-material/button':  'node_modules/@angular2-material/button',
-    '@angular2-material/card':    'node_modules/@angular2-material/card',
-    '@angular2-material/icon':    'node_modules/@angular2-material/icon',
+    'rxjs':                       'node_modules/rxjs'
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
     'app':                        { main: 'main.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
-    'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
-    '@angular2-material/core':    { main: 'core.js', format: 'cjs', defaultExtension: 'js' },
-    '@angular2-material/button':  { main: 'button.js', format: 'cjs', defaultExtension: 'js' },
-    '@angular2-material/card':    { main: 'card.js', format: 'cjs', defaultExtension: 'js' },
-    '@angular2-material/icon':    { main: 'icon.js', format: 'cjs', defaultExtension: 'js' },
+    'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' }
   };
   var ngPackageNames = [
     'common',

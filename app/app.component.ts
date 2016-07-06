@@ -19,6 +19,11 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
   directives: [ROUTER_DIRECTIVES],
   providers: [
     HeroService
+  ],
+  precompile: [
+    DashboardComponent,
+    HeroDetailComponent,
+    HeroesComponent
   ]
 })
 
