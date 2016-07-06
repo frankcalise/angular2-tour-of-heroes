@@ -10,7 +10,8 @@
     'rxjs':                       'node_modules/rxjs',
     '@angular2-material/core':    'node_modules/@angular2-material/core',
     '@angular2-material/button':  'node_modules/@angular2-material/button',
-    '@angular2-material/toolbar': 'node_modules/@angular2-material/toolbar'
+    '@angular2-material/toolbar': 'node_modules/@angular2-material/toolbar',
+    '@angular2-material/card':    'node_modules/@angular2-material/card'
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
@@ -19,7 +20,8 @@
     'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
     '@angular2-material/core':    { main: 'core.js', defaultExtension: 'js', format: 'cjs' },
     '@angular2-material/button':  { main: 'button.js', defaultExtension: 'js', format: 'cjs' },
-    '@angular2-material/toolbar': { main: 'toolbar.js', defaultExtension: 'js', format: 'cjs' }
+    '@angular2-material/toolbar': { main: 'toolbar.js', defaultExtension: 'js', format: 'cjs' },
+    '@angular2-material/card':    { main: 'card.js', defaultExtension: 'js', format: 'cjs' }
   };
   var ngPackageNames = [
     'common',

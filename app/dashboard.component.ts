@@ -2,11 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Hero } from './hero';
 import { HeroService } from './hero.service';
+import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
+import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 
 @Component({
   selector: 'my-dashboard',
   templateUrl: 'app/dashboard.component.html',
-  styleUrls: ['app/dashboard.component.css']
+  styleUrls: ['app/dashboard.component.css'],
+  directives: [
+    MD_CARD_DIRECTIVES,
+    MD_BUTTON_DIRECTIVES
+  ]
 })
 
 export class DashboardComponent implements OnInit {
