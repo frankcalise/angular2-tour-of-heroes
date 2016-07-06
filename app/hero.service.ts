@@ -1,5 +1,6 @@
-import { Injectable } from 'angular2/core';
-import { Headers, Http } from 'angular2/http';
+import { Injectable } from '@angular/core';
+import { Headers, Http } from '@angular/http';
+import { Hero } from './hero';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -8,6 +9,8 @@ import 'rxjs/add/operator/toPromise';
 // into this service
 @Injectable()
 export class HeroService {
+  hero: Hero;
+
   private heroesUrl = 'http://frankcalise.com/angular2/heroes.php';
 
   constructor(private _http: Http) { }
@@ -23,6 +26,7 @@ export class HeroService {
   }
 
   getHero(id: number) {
+
     return this.getHeroes()
                .then(heroes => heroes.filter(hero => hero.id === id)[0]);
   }
