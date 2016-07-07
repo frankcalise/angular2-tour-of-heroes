@@ -4,10 +4,19 @@ import { HeroDetailComponent } from './hero-detail.component';
 import { HeroService } from './hero.service';
 import { OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
+import { MD_ICON_DIRECTIVES, MdIconRegistry } from '@angular2-material/icon';
 
 @Component({
   selector: 'my-heroes',
-  directives: [HeroDetailComponent],
+  directives: [
+    HeroDetailComponent,
+    MD_LIST_DIRECTIVES,
+    MD_ICON_DIRECTIVES
+  ],
+  providers: [
+    MdIconRegistry
+  ],
   templateUrl: 'app/heroes.component.html',
   styleUrls: ['app/heroes.component.css']
 })

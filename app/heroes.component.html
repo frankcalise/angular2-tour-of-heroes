@@ -5,10 +5,12 @@
   </h2>
   <button (click)="gotoDetail()">View Details</button>
 </div>
-<ul class="heroes">
-  <li *ngFor="let hero of heroes"
+<md-list class="heroes">
+  <md-list-item *ngFor="let hero of heroes"
       (click)="onSelect(hero)"
       [class.selected]="hero === selectedHero">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
-  </li>
-</ul>
+    <md-icon md-list-icon>account_circle</md-icon>
+    <span md-line>{{hero.name}}</span>
+    <span md-line class="secondary">{{hero.id}}</span>
+  </md-list-item>
+</md-list>
