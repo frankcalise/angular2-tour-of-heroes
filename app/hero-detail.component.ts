@@ -4,13 +4,18 @@ import { Hero } from './hero';
 import { HeroService } from './hero.service';
 import { MD_ICON_DIRECTIVES, MdIconRegistry } from '@angular2-material/icon';
 import { MD_INPUT_DIRECTIVES } from '@angular2-material/input';
+import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
+import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 
 @Component({
   selector: 'my-hero-detail',
   templateUrl: 'app/hero-detail.component.html',
+  styleUrls: ['app/hero-detail.component.css'],
   directives: [
     MD_ICON_DIRECTIVES,
-    MD_INPUT_DIRECTIVES
+    MD_INPUT_DIRECTIVES,
+    MD_BUTTON_DIRECTIVES,
+    MD_CARD_DIRECTIVES
   ],
   providers: [
     MdIconRegistry
