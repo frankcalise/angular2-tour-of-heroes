@@ -6,13 +6,15 @@ import { OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
 import { MD_ICON_DIRECTIVES, MdIconRegistry } from '@angular2-material/icon';
+import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 
 @Component({
   selector: 'my-heroes',
   directives: [
     HeroDetailComponent,
     MD_LIST_DIRECTIVES,
-    MD_ICON_DIRECTIVES
+    MD_ICON_DIRECTIVES,
+    MD_BUTTON_DIRECTIVES
   ],
   providers: [
     MdIconRegistry
@@ -45,7 +47,7 @@ export class HeroesComponent implements OnInit {
 
   getHeroes() {
     // Original synchronous call
-    //this.heroes = this.heroService.getHeroes();
+    // this.heroes = this.heroService.getHeroes();
 
     // Call via Promise
     this._heroService.getHeroes().then(heroes => this.heroes = heroes);
