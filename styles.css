@@ -10,7 +10,7 @@ h2, h3 {
   font-weight: lighter;
 }
 body {
-  margin: 2em;
+  background: rgba(0,0,0,0.03);
 }
 body, input[text], button {
   color: #888;
@@ -24,4 +24,8 @@ body, input[text], button {
 button, a {
   margin: 8px;
   text-transform: uppercase;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
