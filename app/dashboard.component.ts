@@ -1,3 +1,5 @@
+declare var __moduleName: string;
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Hero } from './hero';
@@ -6,9 +8,10 @@ import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 
 @Component({
+  moduleId: __moduleName,
   selector: 'my-dashboard',
-  templateUrl: 'app/dashboard.component.html',
-  styleUrls: ['app/dashboard.component.css'],
+  templateUrl: 'dashboard.component.html',
+  styleUrls: ['dashboard.component.css'],
   directives: [
     MD_CARD_DIRECTIVES,
     MD_BUTTON_DIRECTIVES

@@ -1,3 +1,5 @@
+declare var __moduleName: string;
+
 import { Component } from '@angular/core';
 import { Hero } from './hero';
 import { HeroDetailComponent } from './hero-detail.component';
@@ -9,6 +11,7 @@ import { MD_ICON_DIRECTIVES, MdIconRegistry } from '@angular2-material/icon';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 
 @Component({
+  moduleId: __moduleName,
   selector: 'my-heroes',
   directives: [
     HeroDetailComponent,
@@ -19,8 +22,8 @@ import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
   providers: [
     MdIconRegistry
   ],
-  templateUrl: 'app/heroes.component.html',
-  styleUrls: ['app/heroes.component.css']
+  templateUrl: 'heroes.component.html',
+  styleUrls: ['heroes.component.css']
 })
 
 export class HeroesComponent implements OnInit {

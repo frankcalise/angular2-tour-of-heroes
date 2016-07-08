@@ -1,3 +1,5 @@
+declare var __moduleName: string;
+
 import { Component } from '@angular/core';
 import { HeroService } from './hero.service';
 import { HeroesComponent } from './heroes.component';
@@ -9,6 +11,7 @@ import { MD_TOOLBAR_DIRECTIVES } from '@angular2-material/toolbar';
 import { Router } from '@angular/router';
 
 @Component({
+  moduleId: __moduleName,
   selector: 'my-app',
   template: `
     <md-toolbar color="primary">
@@ -20,7 +23,7 @@ import { Router } from '@angular/router';
     </nav>
     <router-outlet></router-outlet>
   `,
-  styleUrls: ['app/app.component.css'],
+  styleUrls: ['app.component.css'],
   directives: [
     ROUTER_DIRECTIVES,
     MD_BUTTON_DIRECTIVES,

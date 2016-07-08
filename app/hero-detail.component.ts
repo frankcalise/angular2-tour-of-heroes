@@ -1,3 +1,5 @@
+declare var __moduleName: string;
+
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Hero } from './hero';
@@ -8,9 +10,10 @@ import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 
 @Component({
+  moduleId: __moduleName,
   selector: 'my-hero-detail',
-  templateUrl: 'app/hero-detail.component.html',
-  styleUrls: ['app/hero-detail.component.css'],
+  templateUrl: 'hero-detail.component.html',
+  styleUrls: ['hero-detail.component.css'],
   directives: [
     MD_ICON_DIRECTIVES,
     MD_INPUT_DIRECTIVES,
