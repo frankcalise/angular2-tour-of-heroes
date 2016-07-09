@@ -14,7 +14,8 @@
     '@angular2-material/card':    'node_modules/@angular2-material/card',
     '@angular2-material/icon':    'node_modules/@angular2-material/icon',
     '@angular2-material/input':   'node_modules/@angular2-material/input',
-    '@angular2-material/list':    'node_modules/@angular2-material/list'
+    '@angular2-material/list':    'node_modules/@angular2-material/list',
+    'ng2-translate':              'node_modules/ng2-translate'
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
@@ -27,7 +28,8 @@
     '@angular2-material/card':    { main: 'card.js', defaultExtension: 'js', format: 'cjs' },
     '@angular2-material/icon':    { main: 'icon.js', defaultExtension: 'js', format: 'cjs' },
     '@angular2-material/input':   { main: 'input.js', defaultExtension: 'js', format: 'cjs' },
-    '@angular2-material/list':    { main: 'list.js', defaultExtension: 'js', format: 'cjs' }
+    '@angular2-material/list':    { main: 'list.js', defaultExtension: 'js', format: 'cjs' },
+    'ng2-translate':    { main: 'ng2-translate.js', defaultExtension: 'js' }
   };
   var ngPackageNames = [
     'common',

@@ -8,13 +8,14 @@ import { DashboardComponent } from './dashboard.component';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import { MD_TOOLBAR_DIRECTIVES } from '@angular2-material/toolbar';
 import { Router, ROUTER_DIRECTIVES } from '@angular/router';
+import { TranslateService } from 'ng2-translate';
 
 @Component({
   moduleId: __moduleName,
   selector: 'my-app',
   template: `
     <md-toolbar color="primary">
-      Tour of Heroes
+      {{ 'APP_TITLE' | translate }}
     </md-toolbar>
     <nav>
       <button md-raised-button (click)="gotoNav('/dashboard')" [color]="isLinkActive('/dashboard')">Dashboard</button>
@@ -40,12 +41,20 @@ import { Router, ROUTER_DIRECTIVES } from '@angular/router';
 
 export class AppComponent {
   sub: any;
-  title = 'Tour of Heroes';
   page = '/dashboard';
 
   constructor(
-    private _router: Router) {
+    private _router: Router,
+    private _translate: TranslateService) {
+      let userLang = navigator.language.split('-')[0]; // use navigator lang if available
+      userLang = /(en|it)/gi.test(userLang) ? userLang : 'en';
 
+      // default language to fallback when translation isn't found
+      // in current language
+      _translate.setDefaultLang('en');
+
+      // language to use
+      _translate.use(userLang);
   }
 
   gotoNav(page: string) {
