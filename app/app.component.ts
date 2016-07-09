@@ -9,6 +9,8 @@ import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import { MD_TOOLBAR_DIRECTIVES } from '@angular2-material/toolbar';
 import { Router, ROUTER_DIRECTIVES } from '@angular/router';
 import { TranslateService } from 'ng2-translate';
+import { MD_RADIO_DIRECTIVES } from '@angular2-material/radio';
+import {  MdUniqueSelectionDispatcher } from '@angular2-material/core/coordination/unique-selection-dispatcher';
 
 @Component({
   moduleId: __moduleName,
@@ -16,6 +18,11 @@ import { TranslateService } from 'ng2-translate';
   template: `
     <md-toolbar color="primary">
       {{ 'APP_TITLE' | translate }}
+      <span class="example-fill-remaining-space"></span>
+      <md-radio-group name="language">
+        <md-radio-button value="en">English</md-radio-button>
+        <md-radio-button value="it">Italian</md-radio-button>
+      </md-radio-group>
     </md-toolbar>
     <nav>
       <button md-raised-button (click)="gotoNav('/dashboard')" [color]="isLinkActive('/dashboard')">Dashboard</button>
@@ -27,10 +34,12 @@ import { TranslateService } from 'ng2-translate';
   directives: [
     ROUTER_DIRECTIVES,
     MD_BUTTON_DIRECTIVES,
-    MD_TOOLBAR_DIRECTIVES
+    MD_TOOLBAR_DIRECTIVES,
+    MD_RADIO_DIRECTIVES
   ],
   providers: [
-    HeroService
+    HeroService,
+    MdUniqueSelectionDispatcher
   ],
   precompile: [
     DashboardComponent,
