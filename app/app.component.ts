@@ -75,7 +75,7 @@ export class AppComponent {
 
   private setLanguage(newLang: string) {
     if (newLang !== this.userLang) {
-      this.userLang = /(en|it)/gi.test(newLang) ? newLang : 'en';
+      this.userLang = /(en|it|es)/gi.test(newLang) ? newLang : 'en';
       this._translate.use(this.userLang);
     }
   }
